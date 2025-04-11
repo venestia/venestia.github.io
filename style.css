@@ -1,0 +1,152 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.navbar {
+    background: #1a1a1a;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    color: #ffcc00;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+.menu-button {
+    background: #ffcc00;
+    color: #121212;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Main Content */
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* Filters */
+.filters-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.filters-container p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.filters select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background: #333;
+    color: white;
+}
+
+/* Table */
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #444;
+}
+
+th {
+    background: #1a1a1a;
+    color: #ffcc00;
+}
+
+tr:hover {
+    background-color: #222;
+    cursor: pointer;
+}
+
+/* Expandable Row Animation */
+.expanded-row {
+    display: none;
+    background-color: #1a1a1a;
+    transition: all 0.3s ease-in-out;
+}
+
+.expanded-content {
+    padding: 10px;
+    font-size: 14px;
+    color: #ffcc00;
+    opacity: 0;
+    transform: translateY(-5px);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.expanded-row.show .expanded-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.code {
+    cursor: pointer;
+    color: #ffcc00;
+    font-weight: bold;
+}
+
+.code:hover {
+    text-decoration: underline;
+}
+
+.copied-message {
+    font-size: 14px;
+    color: #00ff00;
+    display: none;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.customization-code {
+    background-color: #222;
+    padding: 10px;
+    border-radius: 5px;
+    white-space: pre-wrap;
+    font-size: 12px;
+    color: #ffffff;
+    margin-top: 10px;
+}

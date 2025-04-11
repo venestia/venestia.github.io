@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venestia | Detail Kit</title>
+
+    <!-- Import Poppins Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Import Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+            html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+        /* Navbar */
+    .navbar {
+        position: fixed; /* Fixes the navbar to the top */
+        top: 0; /* Aligns it to the top */
+        left: 0; /* Aligns it to the left */
+        right: 0; /* Aligns it to the right */
+        background: rgba(26, 26, 26, 0.8);
+        padding: 20px 20px;
+        display: flex;
+        justify-content: space-between;  /* Centers the navbar */
+        align-items: center;
+        z-index: 1000; /* Ensures the navbar is above other content */
+        backdrop-filter: blur(10px); /* Blur effect */
+        -webkit-backdrop-filter: blur(10px); /* For Safari support */
+        background-image: linear-gradient(to right, #1a1a1a, #ededed, #1a1a1a); /* Gradient line */
+        background-size: 100% 3px; /* Width: 100%, Height: 2px */
+        background-position: bottom; /* Position at the bottom */
+        background-repeat: no-repeat; /* Prevent repeating */
+    }
+
+    .navbar a {
+        color: #ffcc00;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    .menu-container {
+        position: relative;
+    }
+
+    .menu-btn {
+        background: none; /* No background */
+        border: 1px solid #ededed; /* Border color */
+        color: #ededed; /* Text color */
+        cursor: pointer;
+        padding: 8px 12px; /* Padding for the button */
+        border-radius: 5px; /* Rounded corners */
+        font-size: 14px; /* Font size */
+        font-weight: 600; /* Font weight */
+        transition: background 0.3s, color 0.3s; /* Transition for hover effect and color change */
+    }
+
+    /* Change button color when the menu is open */
+    .menu-container.open .menu-btn {
+        background: rgba(100, 100, 100, 0.8);
+        color: #ededed; /* Change text color if needed */
+    }
+    
+    .menu-container.open .menu-content {
+    display: block; /* Show the dropdown when the menu is open */
+}
+
+    .menu-content {
+        display: none;
+        position: absolute;
+        top: calc(100% + 20px);
+        right: 0;
+        background-color: rgba(26, 26, 26, 0.8);
+        padding: 5px;
+        border-radius: 5px;
+        width: 160px;
+        z-index: 100;
+        max-width: calc(100vw - 20px); /* Ensure it fits within the viewport */
+        box-sizing: border-box;
+        text-align: right;
+        font-size: 14px;
+        border: 1px solid #ededed;
+    }
+
+    .menu-content a {
+        color: #ffffff;
+        text-decoration: none;
+        padding: 5px;
+        display: block;
+        margin: 2px 0;
+    }
+
+    .menu-content a:hover {
+        background: #333;
+    }
+
+    .home-icon {
+        width: auto;
+        height: 30px;
+        vertical-align: middle;
+    }
+    
+            .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            padding-top: 80px;
+        }
+
+        /* Title */
+        h1 {
+            text-align: center;
+        }
+
+        /* Detail Kit Section */
+        .detail-kit-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        /* Detail Kit Card */
+        .detail-kit-card {
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            text-align: center;
+            width: 250px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .detail-kit-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .detail-kit-card h3 {
+            margin: 10px 0;
+            font-size: 18px;
+            color: #ffcc00;
+        }
+
+        /* Detail Kit Info (Hidden by Default) */
+        .detail-kit-info {
+            display: none;
+            background: #333;
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            text-align: left;
+        }
+
+        .detail-kit-info p {
+            margin: 5px 0;
+        }
+
+        /* Download Button */
+        .download-btn {
+            display: none;
+            margin: 10px auto 0;
+            background: #ffcc00;
+            color: #1a1a1a;
+            padding: 8px 15px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            width: fit-content;
+        }
+
+        .download-btn:hover {
+            background: #e6b800;
+        }
+
+        /* Arrow Button */
+        .arrow-btn {
+            background: none;
+            border: none;
+            color: #ffcc00;
+            font-size: 20px;
+            cursor: pointer;
+            margin-top: 10px;
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+        
+        footer {
+    width: 100%;
+    text-align: center;
+    padding: 30px;
+    background: #1a1a1a;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+    transform: translateX(-30px)
+}
+footer a {
+    color: #ffffff; /* White text */
+    text-decoration: none; /* Remove underline by default */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+footer p {
+    margin: 5px 0; /* Reduce the margin between lines */
+    line-height: 1.2; /* Adjust line height for tighter spacing */
+}
+
+.social-links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center; /* Center social links horizontally */
+    gap: 10px;/* Add spacing between social links */
+}
+        .social-links a {
+            color: #ededed;
+            font-size: 25px;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 400;
+        }
+
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+        
+        h6
+{
+  padding: 0 30px;
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+    <a href="index.html">
+        <img src="/venlogo.png" alt="Home" class="home-icon">
+    </a>
+    <div class="menu-container">
+        <button class="menu-btn" onclick="toggleMenu()">
+             Menu <!-- Just the text "Menu" -->
+        </button>
+        <div class="menu-content">
+            <a href="list.html">Livery</a>
+            <a href="detail-kit.html">Detail Kit</a>
+            <a href="commitment.html">Our Commitment</a>
+            <a href="test.html">Our Commitment</a>
+        </div>
+    </div>
+</div>
+
+<div class="main-content">
+<h1>Commercial Aircraft Detail Kits</h1>
+
+<!-- Detail Kit Content -->
+<div class="detail-kit-container">
+
+    <!-- Detail Kit Cards -->
+    <div class="detail-kit-card">
+        <img src="/bt200.png" alt="Bristol Type 200">
+        <h3>Bristol Type 200</h3>
+        <a href="https://www.dropbox.com/s/examplelink/airbus_a320_emirates.zip?dl=0" target="_blank" class="download-btn">Download Detail Kit</a>
+        <button class="arrow-btn" onclick="toggleInfo(this)">▼</button>
+        <div class="detail-kit-info">
+            <p><strong>Aircraft:</strong> Bristol Type 200</p>
+            <p><strong>Resolution:</strong> 4096x4096</p>
+            <p><strong>Contains:</strong> PDN</p>
+        </div>
+    </div>
+
+    <div class="detail-kit-card">
+        <img src="/f26.png" alt="Fokker F26 Phantom">
+        <h3>Fokker F26 Phantom</h3>
+        <a href="https://www.dropbox.com/s/examplelink/boeing_747_ba.zip?dl=0" target="_blank" class="download-btn">Download Detail Kit</a>
+        <button class="arrow-btn" onclick="toggleInfo(this)">▼</button>
+        <div class="detail-kit-info">
+            <p><strong>Aircraft:</strong> Boeing 747</p>
+            <p><strong>Airline:</strong> British Airways</p>
+            <p><strong>Resolution:</strong> 4096x4096</p>
+            <p><strong>Format:</strong> PNG</p>
+        </div>
+    </div>
+
+<div>
+<h4><i>More detail kits coming out soon.</i></h4>
+</div>
+</div>
+    <footer>
+        <p>&copy; 2025 Venestia by Avilan. All rights reserved.</p>
+                <p><a href="terms.html">Terms of Service</a> | <a href="privacy.html">Privacy Policy</a></p>
+                    <h6><i>I am not affiliated with any of the platforms that I make the liveries in. I am simply a player, just like everyone else, that makes liveries and detail kits that are available for public use under my own terms and conditions.</i></h6>
+        <div class="social-links">
+            <a href="https://www.youtube.com/@realavilan" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://x.com/RealAvilan" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/alvin.liveries" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+
+</div>
+
+<script>
+function toggleMenu() {
+    document.querySelector('.menu-container').classList.toggle('open');
+}
+
+// Function to close the menu if clicked outside
+function closeMenu(event) {
+    const menuContainer = document.querySelector('.menu-container');
+    const menuContent = document.querySelector('.menu-content');
+
+    // Check if the click was outside the menu container and menu content
+    if (!menuContainer.contains(event.target) && !menuContent.contains(event.target)) {
+        menuContainer.classList.remove('open'); // Close the menu
+    }
+}
+
+// Add event listener for clicks outside the menu
+document.addEventListener('click',
+closeMenu);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venestia | Liveries</title>
+
+    <!-- Import Poppins Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Import Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+
+    <style>
+        /* Navbar */
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
+
+        /* Apply Poppins font globally */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+        /* Custom scrollbar for WebKit browsers (Chrome, Safari, Edge) */
+        ::-webkit-scrollbar {
+            width: 8px; /* Width of the scrollbar */
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #1a1a1a; /* Track color */
+            border-radius: 4px; /* Rounded corners */
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #444; /* Thumb color */
+            border-radius: 4px; /* Rounded corners */
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555; /* Thumb color on hover */
+        }
+
+        /* Custom scrollbar for Firefox */
+        * {
+            scrollbar-width: thin; /* Thin scrollbar */
+            scrollbar-color: #444 #1a1a1a; /* Thumb and track color */
+        }
+
+        /* Navbar */
+        .navbar {
+            position: fixed; /* Fixes the navbar to the top */
+            top: 0; /* Aligns it to the top */
+            left: 0; /* Aligns it to the left */
+            right: 0; /* Aligns it to the right */
+            background: rgba(26, 26, 26, 0.8);
+            padding: 20px 20px;
+            display: flex;
+            justify-content: space-between;  /* Centers the navbar */
+            align-items: center;
+            z-index: 1000; /* Ensures the navbar is above other content */
+            backdrop-filter: blur(10px); /* Blur effect */
+            -webkit-backdrop-filter: blur(10px); /* For Safari support */
+            background-image: linear-gradient(to right, #1a1a1a, #ededed, #1a1a1a); /* Gradient line */
+            background-size: 100% 3px; /* Width: 100%, Height: 2px */
+            background-position: bottom; /* Position at the bottom */
+            background-repeat: no-repeat; /* Prevent repeating */
+        }
+
+        .navbar a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Menu */
+        .menu-container {
+            position: relative;
+        }
+        
+        /* Change button color when the menu is open */
+        .menu-container.open .menu-btn {
+            background: rgba(100, 100, 100, 0.8);
+            color: #ededed; /* Change text color if needed */
+        }
+        
+        .menu-container.open .menu-content {
+            display: block;
+        }
+        
+        .menu-content {
+            display: none;
+            position: absolute;
+            top: calc(100% + 20px);
+            right: 0;
+            background-color: rgba(26, 26, 26, 0.8);
+            padding: 5px;
+            border-radius: 5px;
+            width: 160px;
+            z-index: 100;
+            max-width: calc(100vw - 20px); /* Ensure it fits within the viewport */
+            box-sizing: border-box;
+            text-align: right;
+            font-size: 14px;
+            border: 1px solid #ededed;
+        }
+
+        .menu-content a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 5px;
+            display: block;
+            margin: 2px 0;
+        }
+
+        .menu-content a:hover {
+            background: #333;
+        }
+
+        .menu-btn {
+            background: none; /* No background */
+            border: 1px solid #ededed; /* Border color */
+            color: #ededed; /* Text color */
+            cursor: pointer;
+            padding: 8px 12px; /* Padding for the button */
+            border-radius: 5px; /* Rounded corners */
+            font-size: 14px; /* Font size */
+            font-weight: 600; /* Font weight */
+            transition: background 0.3s, color 0.3s; /* Transition for hover effect and color change */
+            transform: translateX(10px)
+        }
+        
+        .home-icon {
+            width: auto;  /* Adjust size */
+            height: 30px; /* Keep aspect ratio */
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Full-width image with fade-out effect */
+        .hero-section {
+            position: relative;
+            width: 100vw; /* Use viewport width to span the entire page */
+            left: 50%; /* Center the section */
+            right: 50%; /* Center the section */
+            margin-left: -50vw; /* Offset to center */
+            margin-right: -50vw; /* Offset to center */
+            height: 400px; /* Adjust height as needed */
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/I-EDZA_.png') center/cover; /* Add your image here */
+            display: flex;
+                flex-direction: column; /* Stack elements vertically */
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #ffffff;
+            margin-bottom: 50px;
+        }
+
+        .hero-section::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100px; /* Height of the fade-out effect */
+            background: linear-gradient(to bottom, transparent, #121212); /* Fade to background color */
+        }
+
+        .hero-section h1 {
+            font-size: 70px;
+            margin: 0;
+            font-weight: 600;
+            z-index: 1; /* Ensure text is above the gradient */
+        }
+
+        .hero-section p {
+            font-size: 24px;
+            margin: 10px 0 0;
+            z-index: 1; /* Ensure text is above the gradient */
+        }
+        
+        @media (max-width: 768px) {
+            .item {
+                width: 100%;
+            }
+
+            .main-content {
+                padding: 15px;
+            }
+
+            .hero-section h1 {
+                font-size: 40px;
+            }
+
+            .hero-section p {
+                font-size: 18px;
+                padding: 0 30px;
+            }
+        }
+
+
+        /* Filters */
+        .filter-container {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        #use-filters-btn {
+          margin: 20px auto;
+            background-color: transparent; /* Transparent fill */
+            color: #ededed; /* Light text color */
+            padding: 10px 20px; /* Add padding for better clickability */
+            border: 1px solid #ededed; /* Light outline */
+            border-radius: 5px; /* Rounded corners */
+            font-size: 16px; /* Font size */
+            font-weight: 600; /* Bold text */
+            cursor: pointer; /* Pointer cursor on hover */
+            transition: border-color 0.3s, color 0.3s; /* Smooth transition */
+            margin-bottom: 10px; /* Add spacing below the button */
+        }
+        
+        
+        #use-filters-btn.filters-active {
+            border-color: #ffcc00; /* Light green outline when filters are active */
+            color: #ffcc00; /* Light green text when filters are active */
+        }
+        
+        #filters {
+            display: flex;
+            flex-direction: column; /* Stack filters vertically */
+            gap: 10px; /* Add spacing between elements */
+            align-items: center;
+        }
+        select, button {
+            padding: 10px;
+            margin-right: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        select {
+            background: #333;
+            color: white;
+        }
+
+        .clear-btn {
+            background: transparent; /* Transparent background */
+            color: red; /* Red text */
+            border: 2px solid red; /* Red outline */
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: 0.3s ease-in-out;
+        }
+
+        /* Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: #1a1a1a;
+            table-layout: auto; /* Allow columns to adjust width dynamically */
+        }
+        
+        th, td {
+            padding: 12px;
+            text-align: center; /* Center align text in all table cells */
+            border-bottom: 1px solid #444;
+        }
+        
+        /* Prevent text wrapping in the Reg. column */
+        td:nth-child(4) {
+            white-space: nowrap; /* Keep text on a single line */
+            min-width: 80px; /* Ensure the Reg. column has enough space */
+        }
+        
+        /* Allow text wrapping in the Livery column */
+        td:nth-child(3) {
+            word-wrap: break-word; /* Allow long text to wrap */
+            overflow-wrap: break-word; /* Ensure text wraps within the cell */
+            max-width: 150px; /* Limit the width of the Livery column */
+        }
+
+        th {
+            background: #222;
+            cursor: pointer;
+        }
+
+        th:hover {
+            background: #333;
+        }
+
+        @media (max-width: 768px) {
+            .table-container {
+                width: 100%;
+                padding: 0 5px; /* Reduces padding on smaller screens */
+            }
+
+            table {
+                width: 100%;
+            }
+
+            th, td {
+                padding: 6px;
+                font-size: 14px; /* Adjust text size for better fit */
+            }
+
+            .filter-container {
+                display: flex;
+                flex-direction: column; /* Stack filters vertically */
+                gap: 10px; /* Add spacing between elements */
+                align-items: center;
+            }
+
+            select, .clear-btn {
+                width: 90%; /* Make dropdowns and button wider */
+                margin: 5px 0;
+            }
+        }
+
+        .code {
+            background: #333;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .code:hover {
+            background: #444;
+        }
+
+        .copied {
+            color: green;
+            font-size: 12px;
+            margin-left: 10px;
+        }
+
+        .image-column {
+            text-align: center;
+            width: 50px;
+        }
+
+        .image-icon img {
+            display: inline-block;
+            margin-left: 0px;
+        }
+        
+        /* Style for fictional rows */
+        /*real airline/livery, fictional/concept aircraft*/
+        .fictional-reg {
+            color: #ffdd50; /* Brighter text color for fictional Reg. */
+        }
+        
+        /* Style for semi-fictional rows */
+        /*real airline/livery, real aircraft, aircraft type did not wear that livery*/
+        .semi-fictional-reg {
+            color: #66ff66; /* Light green text color for semi-fictional Reg. */
+        }
+        
+        /*fictional airline, real aircraft*/
+        .full-fictional-reg {
+            color: #00bbff;
+        }
+
+        .expandable {
+            display: none; /* Initially hide the expandable rows */
+        }
+
+        .expandable.expanded {
+            display: table-row; /* Show the row when expanded */
+        }
+        
+        .livery-row.expanded {
+            background-color: #3a3a3a; /* Darker background for expanded row */
+        }
+
+        .back-to-top {
+            display: block; /* Make it a block element */
+            margin: 50px auto; /* Center horizontally and add vertical spacing */
+            padding: 10px 20px; /* Add padding for better clickability */
+            background-color: transparent; /* Yellow background */
+            border: 1px solid #ededed;
+            color: #ededed; /* Dark text color */
+            border-radius: 5px; /* Rounded corners */
+            font-size: 16px; /* Font size */
+            font-weight: 600; /* Bold text */
+            cursor: pointer; /* Pointer cursor on hover */
+            transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+        }
+        
+        footer {
+            width: 100%;
+            text-align: center;
+            padding: 30px;
+            background: #1a1a1a;
+            margin-top: 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center content horizontally */
+            justify-content: center; /* Center content vertically */
+            transform: translateX(-30px)
+        }
+        
+        footer a {
+            color: #ffffff; /* White text */
+            text-decoration: none; /* Remove underline by default */
+        }
+        
+        footer a:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+        
+        footer p {
+            margin: 5px 0; /* Reduce the margin between lines */
+            line-height: 1.2; /* Adjust line height for tighter spacing */
+        }
+        
+        .social-links {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center; /* Center social links horizontally */
+            gap: 10px;/* Add spacing between social links */
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        .social-links a {
+            color: #ededed;
+            font-size: 25px;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 400;
+        }
+
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+        
+        h6
+        {
+          padding: 0 30px;
+        }
+        
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+    <a href="index.html">
+        <img src="/venlogo.png" alt="Home" class="home-icon">
+    </a>
+    <div class="menu-container">
+        <button class="menu-btn" onclick="toggleMenu()">
+             Menu <!-- Just the text "Menu" -->
+        </button>
+        <div class="menu-content">
+            <a href="livery.html">Livery</a>
+            <a href="detail-kit.html">Detail Kit</a>
+            <a href="commitment.html">Our Commitment</a>
+            <a href="test.html">Our Commitment</a>
+        </div>
+    </div>
+</div>
+
+<!-- Hero Section with Full-Width Image and Fade-Out -->
+<div class="hero-section">
+    <h1>Liveries</h1>
+    <p>The list of all liveries that I have created, at your fingertips.</p>
+</div>
+
+<div id="copy-notification" style="display:none; position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background: green; color: white; padding: 10px 20px; border-radius: 5px; z-index: 1000;">
+    Copied to Clipboard!
+</div>
+
+
+<!-- Filters -->
+<!-- Filters -->
+<div class="filter-container">
+    <button id="use-filters-btn" onclick="toggleFilters()">Use Filters</button>
+    <div id="filters" style="display: none;">
+        <select id="aircraft-filter">
+            <option value="" disabled selected>Filter by Aircraft</option>
+            <option value="Airbus A300-600">Airbus A300-600</option>
+            <option value="Airbus A310-300">Airbus A310-300</option>
+            <option value="Airbus A318-100">Airbus A318-100</option>
+            <option value="Airbus A319-100">Airbus A319-100</option>
+            <option value="Airbus A320-200">Airbus A320-200</option>
+            <option value="Airbus A321-200">Airbus A321-200</option>
+            <option value="Airbus A319neo">Airbus A319neo</option>
+            <option value="Airbus A320neo">Airbus A320neo</option>
+            <option value="Airbus A321neo">Airbus A321neo</option>
+            <option value="Airbus A330-200">Airbus A330-200</option>
+            <option value="Airbus A330-300">Airbus A330-300</option>
+            <option value="Airbus A340-200">Airbus A340-200</option>
+            <option value="Airbus A340-300">Airbus A340-300</option>
+            <option value="Airbus A340-500">Airbus A340-500</option>
+            <option value="Airbus A340-600">Airbus A340-600</option>
+            <option value="Airbus A350-900">Airbus A350-900</option>
+            <option value="Airbus A350-1000">Airbus A350-1000</option>
+            <option value="Airbus A380">Airbus A380</option>
+            <option value="Antonov An-225">Antonov An-225</option>
+            <option value="Boeing 707">Boeing 707</option>
+            <option value="Boeing 727">Boeing 727</option>
+            <option value="Boeing 737-100">Boeing 737-100</option>
+            <option value="Boeing 737-200">Boeing 737-200</option>
+            <option value="Boeing 737-600">Boeing 737-600</option>
+            <option value="Boeing 737-700">Boeing 737-700</option>
+            <option value="Boeing 737-800">Boeing 737-800</option>
+            <option value="Boeing 737-900">Boeing 737-900</option>
+            <option value="Boeing 737 MAX 8">Boeing 737 MAX 8</option>
+            <option value="Boeing 737 MAX 9">Boeing 737 MAX 9</option>
+            <option value="Boeing 747-100">Boeing 747-100</option>
+            <option value="Boeing 747-200">Boeing 747-200</option>
+            <option value="Boeing 747-300">Boeing 747-300</option>
+            <option value="Boeing 747-400">Boeing 747-400</option>
+            <option value="Boeing 757-200">Boeing 757-200</option>
+            <option value="Boeing 757-300">Boeing 757-300</option>
+            <option value="Boeing 777-200">Boeing 777-200</option>
+            <option value="Boeing 777-300ER">Boeing 777-300ER</option>
+            <option value="Bristol Type 200">Bristol Type 200</option>
+            <option value="Fokker F26">Fokker F26</option>
+        </select>
+        
+        <select id="airline-filter">
+            <option value="" disabled selected>Filter by Airline</option>
+            <option value="British Airways">British Airways</option>
+            <option value="British European Airways">British European Airways</option>
+            <option value="KLM">KLM</option>
+            <option value="Philippine Airlines">Philippine Airlines</option>
+            <option value="LATAM">LATAM</option>
+        </select>
+
+        <button class="clear-btn" onclick="clearFilters()">Clear Filters</button>
+    </div>
+</div>
+
+<!-- Table -->
+<div class="table-container">
+    <table id="livery-table">
+        <thead>
+            <tr>
+                <th>Aircraft</th>
+                <th>Airline</th>
+                <th>Livery</th>
+                <th>Reg.</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+    </table>
+</div>
+
+<!-- Modal for Image -->
+<div id="image-modal" style="display:none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); justify-content: center; align-items: center; z-index: 100;">
+    <div style="position: relative; max-width: 90%; max-height: 90%; margin: auto;">
+        <img id="modal-image" src="" alt="Livery Image" style="width: 100%; height: auto;">
+        <button onclick="closeImage()" style="position: absolute; top: 10px; right: 10px; background: #fff; border: none; padding: 10px; cursor: pointer; font-size: 20px;">X</button>
+    </div>
+</div>
+
+ <button onclick="scrollToTop()" class="back-to-top">Back to Top</button>
+    <footer>
+        <p>&copy; 2025 Venestia by Avilan. All rights reserved.</p>
+        <p><a href="terms.html">Terms of Service</a> | <a href="privacy.html">Privacy Policy</a></p>
+                    <h6><i>I am not affiliated with any of the platforms that I make the liveries in. I am simply a player, just like everyone else, that makes liveries and detail kits that are available for public use under my own terms and conditions.</i></h6>
+        <div class="social-links">
+            <a href="https://www.youtube.com/@realavilan" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://x.com/RealAvilan" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/alvin.liveries" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+    
+    
+<script src="database.js"></script>
+
+
+<script>
+    // Liveries List (Editable)
+
+    
+function copyToClipboard(text) {
+    navigator.clipboard.writeText(decodeURIComponent(text)).then(() => {
+        let notification = document.getElementById("copy-notification");
+        notification.style.display = "block";
+
+        // Hide the message after 1.5 seconds
+        setTimeout(() => {
+            notification.style.display = "none";
+        }, 1500);
+    }).catch(err => {
+        console.error("Failed to copy text: ", err);
+    });
+}
+    
+    // Function to show the image in a modal
+// Function to show the image in a modal
+function showImage(event, index) {
+    event.stopPropagation(); // Prevent row expansion when clicking image
+
+    const imageModal = document.getElementById("image-modal");
+    const modalImage = document.getElementById("modal-image");
+    const navbar = document.querySelector('.navbar'); // Get the navbar element
+
+    modalImage.src = liveries[index].fullImage; // Set the full image source
+    imageModal.style.display = "flex"; // Show the modal
+    navbar.style.display = "none"; // Hide the navbar
+}
+
+// Function to close the image modal
+function closeImage() {
+    const imageModal = document.getElementById("image-modal");
+    const navbar = document.querySelector('.navbar'); // Get the navbar element
+
+    imageModal.style.display = "none"; // Hide the modal
+    navbar.style.display = "flex"; // Show the navbar
+}
+
+
+function populateTable() {
+            const tableBody = document.getElementById("table-body");
+            tableBody.innerHTML = ""; // Clear table before repopulating
+
+            liveries.forEach((livery, index) => {
+                // Check if it's fictional based on the fictional property
+                const isFictional = livery.fictional === "Yes";
+                const isSemiFictional = livery.semiFictional === "Yes";
+                const isFullFictional = livery.fullFictional === "Yes";
+                // Customization code handling
+                const customizationCode = livery.customization === "No Customization Available" 
+                    ? "No Customization Code" 
+                    : `<span class="code" onclick="copyToClipboard('${encodeURIComponent(JSON.stringify(livery.customization))}')">Copy code</span>`;
+
+                let row = `
+                    <tr class="livery-row" onclick="toggleExpand(${index})">
+                        <td>${livery.aircraft}</td>
+                        <td>${livery.airline}</td>
+                        <td>${livery.livery}</td>
+                        <td class="${isFictional ? 'fictional-reg' : ''} ${isSemiFictional ? 'semi-fictional-reg' : ''} ${isFullFictional ? 'full-fictional-reg' : ''}">${livery.registration}</td>
+                        <td class="image-column">
+                            <span class="image-icon" onclick="showImage(event, ${index})">
+                                <img src="${livery.thumbnail}" alt="Livery Image Icon" style="cursor: pointer; width: 30px; height: 30px;">
+                            </span>
+                        </td>
+                    </tr>
+                    <tr class="expandable" id="expand-${index}">
+                        <td colspan="5">
+                            <div style="display: flex; justify-content: space-between; gap: 20px;">
+                                <!-- Left Side: Body ID, Wing ID, Customization, Notes -->
+                                <div style="flex: 1;">
+                                    <strong>Body ID:</strong><br>
+                                    ${livery.bodyID.map(id => `<span class="code" onclick="copyToClipboard('${id}')">${id}</span>`).join("<br>")}<br><br>
+                                    <strong>Wing ID:</strong><br>
+                                    <span class="code" onclick="copyToClipboard('${livery.wingID}')">${livery.wingID}</span><br><br>
+                                    <strong>Customization Code:</strong><br>
+                                    ${customizationCode}<br><br>
+                                    <strong>Notes:</strong><br>
+                                    ${livery.notes ? livery.notes : "No additional notes."}
+                                </div>
+                                <!-- Middle Division Line -->
+                                <div style="width: 2px; background-color: #444;"></div>
+                                <!-- Right Side: Airframe Info -->
+                                <div style="flex: 1;">
+                                    <strong>Airframe Info:</strong><br>
+                                    ${livery.airframeInfo ? livery.airframeInfo : "No additional airframe information available."}<br><br>
+                                    <strong>Reference Code:</strong><br>
+                                    <span class="code">${livery.referenceCode ? livery.referenceCode : "N/A"}</span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                `;
+                tableBody.innerHTML += row;
+            });
+        }
+
+// Toggle row expansion with smooth height animation
+let currentlyExpanded = null;
+
+function toggleExpand(index) {
+    let row = document.getElementById(`expand-${index}`);
+    let liveryRow = document.querySelector(`#expand-${index}`).previousElementSibling;
+
+    if (currentlyExpanded === index) {
+        // Collapse the row
+        row.classList.remove("expanded");
+        liveryRow.classList.remove("expanded"); // Remove background color
+        currentlyExpanded = null;
+    } else {
+        // Close any previously expanded row
+        if (currentlyExpanded !== null) {
+            let prevRow = document.getElementById(`expand-${currentlyExpanded}`);
+            let prevLiveryRow = document.querySelector(`#expand-${currentlyExpanded}`).previousElementSibling;
+            prevRow.classList.remove("expanded");
+            prevLiveryRow.classList.remove("expanded"); // Remove background color
+        }
+
+        // Expand the clicked row
+        row.classList.add("expanded"); // Add expanded class to show the row
+        liveryRow.classList.add("expanded"); // Add background color
+        currentlyExpanded = index;
+    }
+}
+    // Clear filters
+// Clear filters with confirmation
+function clearFilters() {
+    // Ask the user if they are sure they want to clear the filters
+    const isConfirmed = confirm("Are you sure you want to clear all filters?");
+    
+    // If the user confirms, clear the filters
+    if (isConfirmed) {
+        document.getElementById("aircraft-filter").value = "";
+        document.getElementById("airline-filter").value = "";
+        populateTable();
+    }
+}
+
+    // Filter table based on user selection
+    document.getElementById("aircraft-filter").addEventListener("change", function() {
+        filterTable();
+    });
+
+    document.getElementById("airline-filter").addEventListener("change", function() {
+        filterTable();
+    });
+    
+    function scrollToTop() {       window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    function toggleMenu() {
+        document.querySelector('.menu-container').classList.toggle('open');
+    }
+function filterTable() {
+    // Collapse any currently expanded row
+    if (currentlyExpanded !== null) {
+        let prevRow = document.getElementById(`expand-${currentlyExpanded}`);
+        let prevLiveryRow = document.querySelector(`#expand-${currentlyExpanded}`).previousElementSibling;
+        prevRow.classList.remove("expanded");
+        prevLiveryRow.classList.remove("expanded"); // Remove background color
+        currentlyExpanded = null;
+    }
+
+    let selectedAircraft = document.getElementById("aircraft-filter").value.toLowerCase();
+    let selectedAirline = document.getElementById("airline-filter").value.toLowerCase();
+
+    let hasVisibleRows = false;
+
+    document.querySelectorAll(".livery-row").forEach(row => {
+        let aircraft = row.cells[0].innerText.toLowerCase();
+        let airline = row.cells[1].innerText.toLowerCase();
+
+        if ((selectedAircraft && aircraft !== selectedAircraft) || 
+            (selectedAirline && airline !== selectedAirline)) {
+            row.style.display = "none";
+        } else {
+            row.style.display = "";
+            hasVisibleRows = true;
+        }
+    });
+
+    let tableBody = document.getElementById("table-body");
+
+    // Remove previous "No liveries" row if it exists
+    let noLiveriesRow = document.getElementById("no-liveries-row");
+    if (noLiveriesRow) {
+        noLiveriesRow.remove();
+    }
+
+    // Show the appropriate message if no rows are visible
+    if (!hasVisibleRows) {
+        let message = "";
+        if (selectedAircraft && selectedAirline) {
+            message = "No liveries for this aircraft or airline yet.";
+        } else if (selectedAircraft) {
+            message = "No liveries for this aircraft yet.";
+        } else if (selectedAirline) {
+            message = "No liveries for this airline yet.";
+        } else {
+            message = "No liveries yet.";
+        }
+
+        let row = document.createElement("tr");
+        row.id = "no-liveries-row";
+        row.innerHTML = `<td colspan="5" style="text-align: center; font-style: italic; color: gray;">${message}</td>`;
+        tableBody.appendChild(row);
+    }
+}
+
+function toggleFilters() {
+    const filters = document.getElementById("filters");
+    const useFiltersBtn = document.getElementById("use-filters-btn");
+    const aircraftFilter = document.getElementById("aircraft-filter").value;
+    const airlineFilter = document.getElementById("airline-filter").value;
+
+    if (filters.style.display === "none") {
+        filters.style.display = "flex"; // Show filters
+        useFiltersBtn.textContent = "Hide Filters"; // Change button text
+        useFiltersBtn.classList.remove("filters-active"); // Remove active class
+    } else {
+        filters.style.display = "none"; // Hide filters
+        // Check if any filters are active
+        if (aircraftFilter || airlineFilter) {
+            useFiltersBtn.textContent = "Filters Active"; // Change button text if filters are active
+            useFiltersBtn.classList.add("filters-active"); // Add active class
+        } else {
+            useFiltersBtn.textContent = "Use Filters"; // Change button text if no filters are active
+            useFiltersBtn.classList.remove("filters-active"); // Remove active class
+        }
+    }
+}
+
+    // Toggle menu visibility
+function toggleMenu() {
+    document.querySelector('.menu-container').classList.toggle('open');
+}
+        
+// Function to close the menu if clicked outside
+function closeMenu(event) {
+    const menuContainer = document.querySelector('.menu-container');
+    const menuContent = document.querySelector('.menu-content');
+        
+    // Check if the click was outside the menu container and menu content
+    if (!menuContainer.contains(event.target) && !menuContent.contains(event.target)) {
+        menuContainer.classList.remove('open'); // Close the menu
+    }
+}
+
+document.addEventListener('click', closeMenu);
+// Initialize table population
+populateTable();
+    
+    
+</script>
+
+</body>
+</html>

@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venestia | Our Commitment</title>
+    
+    <!-- Import Poppins Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Import Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Venestia – Our Commitment">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://venestia.neocities.org/avlogo.jpeg">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+    <meta property="og:url" content="https://venestia.neocities.org/">
+    <meta property="og:type" content="website">
+
+  
+    <style>
+    
+            html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background-color: #121212;
+            color: #ffffff;
+        }
+        /* Custom scrollbar for WebKit browsers (Chrome, Safari, Edge) */
+        ::-webkit-scrollbar {
+            width: 8px; /* Width of the scrollbar */
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #1a1a1a; /* Track color */
+            border-radius: 4px; /* Rounded corners */
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #444; /* Thumb color */
+            border-radius: 4px; /* Rounded corners */
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555; /* Thumb color on hover */
+        }
+
+        /* Custom scrollbar for Firefox */
+        * {
+            scrollbar-width: thin; /* Thin scrollbar */
+            scrollbar-color: #444 #1a1a1a; /* Thumb and track color */
+        }
+        /* Navbar */
+    .navbar {
+        position: fixed; /* Fixes the navbar to the top */
+        top: 0; /* Aligns it to the top */
+        left: 0; /* Aligns it to the left */
+        right: 0; /* Aligns it to the right */
+        background: rgba(26, 26, 26, 0.8);
+        padding: 20px 20px;
+        display: flex;
+        justify-content: space-between;  /* Centers the navbar */
+        align-items: center;
+        z-index: 1000; /* Ensures the navbar is above other content */
+        backdrop-filter: blur(10px); /* Blur effect */
+        -webkit-backdrop-filter: blur(10px); /* For Safari support */
+        background-image: linear-gradient(to right, #1a1a1a, #ededed, #1a1a1a); /* Gradient line */
+        background-size: 100% 3px; /* Width: 100%, Height: 2px */
+        background-position: bottom; /* Position at the bottom */
+        background-repeat: no-repeat; /* Prevent repeating */
+    }
+
+    .navbar a {
+        color: #ffcc00;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    .menu-container {
+        position: relative;
+    }
+
+    .menu-btn {
+        background: none; /* No background */
+        border: 1px solid #ededed; /* Border color */
+        color: #ededed; /* Text color */
+        cursor: pointer;
+        padding: 8px 12px; /* Padding for the button */
+        border-radius: 5px; /* Rounded corners */
+        font-size: 14px; /* Font size */
+        font-weight: 600; /* Font weight */
+        transition: background 0.3s, color 0.3s; /* Transition for hover effect and color change */
+    }
+
+    /* Change button color when the menu is open */
+    .menu-container.open .menu-btn {
+        background: rgba(100, 100, 100, 0.8);
+        color: #ededed; /* Change text color if needed */
+    }
+    
+    .menu-container.open .menu-content {
+    display: block; /* Show the dropdown when the menu is open */
+}
+
+    .menu-content {
+        display: none;
+        position: absolute;
+        top: calc(100% + 20px);
+        right: 0;
+        background-color: rgba(26, 26, 26, 0.8);
+        padding: 5px;
+        border-radius: 5px;
+        width: 160px;
+        z-index: 100;
+        max-width: calc(100vw - 20px); /* Ensure it fits within the viewport */
+        box-sizing: border-box;
+        text-align: right;
+        font-size: 14px;
+        border: 1px solid #ededed;
+    }
+
+    .menu-content a {
+        color: #ffffff;
+        text-decoration: none;
+        padding: 5px;
+        display: block;
+        margin: 2px 0;
+    }
+
+    .menu-content a:hover {
+        background: #333;
+    }
+
+    .home-icon {
+        width: auto;
+        height: 30px;
+        vertical-align: middle;
+    }
+
+        /* Full-width image with fade-out effect */
+.hero-section {
+    position: relative;
+    width: 100vw; /* Use viewport width to span the entire page */
+    left: 50%; /* Center the section */
+    right: 50%; /* Center the section */
+    margin-left: -50vw; /* Offset to center */
+    margin-right: -50vw; /* Offset to center */
+    height: 400px; /* Adjust height as needed */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/Pendragon.png') center/cover; /* Add your image here */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 50px;
+}
+
+        .hero-section::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100px; /* Height of the fade-out effect */
+            background: linear-gradient(to bottom, transparent, #121212); /* Fade to background color */
+        }
+
+        .hero-section h1 {
+            font-size: 70px;
+            margin: 0;
+            font-weight: 600;
+            z-index: 1; /* Ensure text is above the gradient */
+        }
+
+        .hero-section p {
+            font-size: 24px;
+            margin: 10px 0 0;
+            z-index: 1; /* Ensure text is above the gradient */
+        }
+                @media (max-width: 768px) {
+            .item {
+                width: 100%;
+            }
+
+            .main-content {
+                padding: 15px;
+            }
+
+            .hero-section h1 {
+                font-size: 40px;
+            }
+
+            .hero-section p {
+                font-size: 18px;
+                padding: 0 30px;
+            }
+        }
+
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            padding-top: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding: 40px 0;
+            background: #1a1a1a;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin: 0;
+            font-weight: 600;
+        }
+
+header p {
+    margin: 0 auto;
+    padding: 0 20px; /* Adjust as needed */
+    max-width: 800px; /* Limits width for better readability */
+    text-align: center;
+}
+
+
+        section {
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+h2 {
+    font-size: 28px;
+    border-bottom: 2px solid transparent; /* Remove the solid color */
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    display: inline-block;
+    font-weight: 600;
+    background: linear-gradient(to right, #1a1a1a, #ededed, #1a1a1a); /* Gradient line */
+    background-size: 100% 2px; /* Width: 100%, Height: 2px */
+    background-position: bottom; /* Position at the bottom */
+    background-repeat: no-repeat; /* Prevent repeating */
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 30px;
+    background: #1a1a1a;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+    transform: translateX(-30px)
+}
+footer a {
+    color: #ffffff; /* White text */
+    text-decoration: none; /* Remove underline by default */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+footer p {
+    margin: 5px 0; /* Reduce the margin between lines */
+    line-height: 1.2; /* Adjust line height for tighter spacing */
+}
+
+.social-links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center; /* Center social links horizontally */
+    gap: 10px;/* Add spacing between social links */
+}
+        .social-links a {
+            color: #ededed;
+            font-size: 25px;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 400;
+        }
+
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+        h6 {
+            padding: 0 30px;;
+        }
+    </style>
+</head>
+<body>
+<div class="hero-section">
+    <h1>Our Commitment</h1>
+    <p>The guiding principles behind the work and creative journey.</p>
+</div>
+<!-- Navbar -->
+<div class="navbar">
+    <a href="index.html">
+        <img src="/venlogo.png" alt="Home" class="home-icon">
+    </a>
+    <div class="menu-container">
+        <button class="menu-btn" onclick="toggleMenu()">
+             Menu <!-- Just the text "Menu" -->
+        </button>
+        <div class="menu-content">
+            <a href="list.html">Livery</a>
+            <a href="detail-kit.html">Detail Kit</a>
+            <a href="commitment.html">Our Commitment</a>
+            <a href="test.html">Our Commitment</a>
+        </div>
+    </div>
+</div>
+
+<!-- Main Content -->
+<div class="main-content">
+<section id="Motto">
+        <h2>Creare, Inspirare.</h2>
+    <p>Manifesting the essence of creativity and inspiration. It highlights the mission to craft unique designs that ignite a spark in others, reminding us of the power of creation to inspire dreams and foster a love for aviation.</p>
+    </section>
+    <section id="Vision">
+        <h2>Vision</h2>
+        <div class="Vision-content">
+            <p>To elevate digital aviation artistry, crafting liveries that capture the beauty, history, and essence of flight with precision and creativity.</p>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section id="Mission">
+        <h2>Mission</h2>
+        <div class="mission-content">
+            <p>Dedicated to designing high-quality, detail-rich liveries that blend historical accuracy with artistic innovation, with the goal being to inspire aviation enthusiasts and creators by providing carefully crafted designs that bring aircraft to life.</p>
+        </div>
+    </section>
+
+
+
+    <!-- Promise Section -->
+    <section id="Promise">
+        <h2>Creative Oath</h2>
+        <div class="content">
+            <p>A promise to craft liveries that awaken the soul and kindle the flames of inspiration in others. Each design serves as more than a tribute to aviation—it acts as a call to dream, explore, and soar higher. Through every brushstroke, the aim is to ignite a sense of wonder and possibility, urging others to see the world through eyes full of curiosity and excitement. This commitment is to inspire, create, and share the breathtaking beauty of flight with those who aspire to reach for the skies.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Venestia by Avilan. All rights reserved.</p>
+                        <p><a href="terms.html">Terms of Service</a> | <a href="privacy.html">Privacy Policy</a></p>
+                    <h6><i>I am not affiliated with any of the platforms that I make the liveries in. I am simply a player, just like everyone else, that makes liveries and detail kits that are available for public use under my own terms and conditions.</i></h6>
+        <div class="social-links">
+            <a href="https://www.youtube.com/@realavilan" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://x.com/RealAvilan" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/alvin.liveries" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+</div>
+<script>
+function toggleMenu() {
+    document.querySelector('.menu-container').classList.toggle('open');
+}
+
+// Function to close the menu if clicked outside
+function closeMenu(event) {
+    const menuContainer = document.querySelector('.menu-container');
+    const menuContent = document.querySelector('.menu-content');
+
+    // Check if the click was outside the menu container and menu content
+    if (!menuContainer.contains(event.target) && !menuContent.contains(event.target)) {
+        menuContainer.classList.remove('open'); // Close the menu
+    }
+}
+
+// Add event listener for clicks outside the menu
+document.addEventListener('click', closeMenu);
+</script>
+</body>
+</html>
