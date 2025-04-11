@@ -6,7 +6,7 @@
             registration: "N201EA",
             bodyID: ["17437719650"],
             wingID: "17444927130",
-            thumbnail: "/ImageIcon.png",  // Small icon shown in table
+            thumbnail: "Icons/ImageIcon.png",  // Small icon shown in table
             fullImage: "/palposter.png",   // Full image for modal
             customization: "No Customization Available",
             notes: "Released independently."
@@ -18,8 +18,8 @@
             registration: "9H-JAI",
             bodyID: ["126410192986285", "96839954445098", "134376930172499"],
             wingID: "80486619936917",
-            thumbnail: "/ImageIcon.png",  // Small icon shown in table
-            fullImage: "/fullPics/B-LXA.png",   // Full image for modal
+            thumbnail: "Icons/ImageIcon.png",  // Small icon shown in table
+            fullImage: "fullPics/B-LXA.png",   // Full image for modal
             customization: {"Radome":"External Static Dischargers (Late)","Wingroot":"Belly UV","Nose":"No Mask","SATCOM":"Clean","Base Variant":"-300X","Exit Configurations":"Small Waist Door"},
             notes: "Released independently.<br>Engines: 130074038637117",
             airframeInfo: "Manufacturer Serial Number (MSN): 118<br>Airframe built as: Airbus A350-1041<br>Engines: Rolls Royce Trent XWB-97"
@@ -31,8 +31,8 @@
             registration: "B-LXA",
             bodyID: ["112469859856149"],
             wingID: "120589570559595",
-            thumbnail: "/ImageIcon.png",  // Small icon shown in table
-            fullImage: "/fullPics/B-LXA.png",   // Full image for modal
+            thumbnail: "Icons/ImageIcon.png",  // Small icon shown in table
+            fullImage: "fullPics/B-LXA.png",   // Full image for modal
             customization: "No Customization Available",
             notes: "Released independently.",
             airframeInfo: "Manufacturer Serial Number (MSN): 118<br>Airframe built as: Airbus A350-1041<br>Engines: Rolls Royce Trent XWB-97"
@@ -44,7 +44,7 @@
             registration: "RA-75525",
             bodyID: [" "],
             wingID: " ",
-            thumbnail: "/ImageIcon.png",
+            thumbnail: "Icons/ImageIcon.png",
             fullImage: " ",
             customization: "No Customization Available",
             notes: "Released independently.",
@@ -58,7 +58,7 @@
             registration: "RA-75528",
             bodyID: [" "],
             wingID: " ",
-            thumbnail: "/ImageIcon.png",
+            thumbnail: "Icons/ImageIcon.png",
             fullImage: " ",
             customization: "No Customization Available",
             notes: "Released independently.",
@@ -72,7 +72,7 @@
             registration: "RA-75532",
             bodyID: [" "],
             wingID: " ",
-            thumbnail: "/ImageIcon.png",
+            thumbnail: "Icons/ImageIcon.png",
             fullImage: " ",
             customization: "No Customization Available",
             notes: "Released independently.",
@@ -86,7 +86,7 @@
             registration: "UR-54060",
             bodyID: [" "],
             wingID: " ",
-            thumbnail: "/ImageIcon.png",
+            thumbnail: "Icons/ImageIcon.png",
             fullImage: " ",
             customization: "No Customization Available",
             semiFictional: "Yes",
@@ -99,7 +99,7 @@
             registration: "G-AWNN",
             bodyID: ["code1", "code2", "code3"],
             wingID: "code4",
-            thumbnail: "/ImageIcon.png",  // Small icon shown in table
+            thumbnail: "Icons/ImageIcon.png",  // Small icon shown in table
             fullImage: "/noimg.png", // Full image for modal
             customization: {"Engines": "Pratt & Whitney PW4000-100", "Radome": "External Static Dischargers (Late)", "Wingroot": "Belly UV", "Nose": "No Mask", "SATCOM": "Clean", "MTOW Rating (Base Variant)": "212t", "Exit Configurations": "Small Waist Door"},
             notes: "Released as part of the Pendragon Collection"
@@ -111,7 +111,7 @@
             registration: "PH-BUG",
             bodyID: ["17461065199"],
             wingID: "174161217894",
-            thumbnail: "/ImageIcon.png",  // Small icon shown in table
+            thumbnail: "Icons/ImageIcon.png",  // Small icon shown in table
             fullImage: "/palposter.png",   // Full image for modal
             customization: "No Customization Available",
             notes: "Released independently.",
@@ -125,7 +125,7 @@
             registration: "N741PR",
             bodyID: ["129654657443408"],
             wingID: "79259409809819",
-            thumbnail: "/ImageIcon.png",  // Small icon shown in table
+            thumbnail: "Icons/ImageIcon.png",  // Small icon shown in table
             fullImage: "/palposter.png",   // Full image for modal
             customization: "No Customization Available",
             notes: "Released independently.",
@@ -139,8 +139,8 @@
             registration: "N741PR",
             bodyID: ["79509001691902"],
             wingID: "90592345920569",
-            thumbnail: "/ImageIcon.png",  // Small icon shown in table
-            fullImage: "/fullPics/N741PR_HFH.png",   // Full image for modal
+            thumbnail: "Icons/ImageIcon.png",  // Small icon shown in table
+            fullImage: "fullPics/N741PR_HFH.png",   // Full image for modal
             customization: "No Customization Available",
             notes: "Released independently.",
             airframeInfo: "Manufacturer Serial Number (MSN): 21832<br>Line Number (LN): 421<br>Airframe built as: Boeing 747-2F6B<br>Engines: General Electric CF6-50E2"
@@ -152,7 +152,7 @@
             registration: "CS-VER",
             bodyID: ["108440780746029"],
             wingID: "17461217894",
-            thumbnail: "/ImageIcon.png",  // Small icon shown in table
+            thumbnail: "Icons/ImageIcon.png",  // Small icon shown in table
             fullImage: "/palposter.png",   // Full image for modal
             customization: "No Customization Available",
             notes: "Released independently.",
@@ -166,7 +166,7 @@
             registration: "G-BYGC",
             bodyID: ["18736588329"],
             wingID: "87612555583810",
-            thumbnail: "/ImageIcon.png",
+            thumbnail: "Icons/ImageIcon.png",
             fullImage: "/beaposter.png",
             customization: "No Customization Available",
             notes: "Released independently",
@@ -179,7 +179,7 @@
             registration: "TF-ISX",
             bodyID: [" "],
             wingID: " ",
-            thumbnail: "/ImageIcon.png",
+            thumbnail: "Icons/ImageIcon.png",
             fullImage: " ",
             customization: "No Customization Available",
             notes: " ",
@@ -192,7 +192,7 @@
             registration: "I-EDZB",
             bodyID: ["83154674531876"],
             wingID: "71174649939341",
-            thumbnail: "/ImageIcon.png",
+            thumbnail: "Icons/ImageIcon.png",
             fullImage: " ",
             customization: {"SATCOM Option 2":"Clean 2","SATCOM Option 1":"Clean 1","Engine":"General Electric GE90-94B","Base Variant":"200"},
             notes: " ",
@@ -206,7 +206,7 @@
             registration: "I-EDZA",
             bodyID: ["124090400923410"],
             wingID: "105438470484857",
-            thumbnail: "/ImageIcon.png",
+            thumbnail: "Icons/ImageIcon.png",
             fullImage: " ",
             customization: {"SATCOM Option 2":"Clean 2","SATCOM Option 1":"Clean 1","Engine":"General Electric GE90-94B","Base Variant":"200"},
             notes: " ",
@@ -220,7 +220,7 @@
             registration: "I-EDZE",
             bodyID: ["105283627980967"],
             wingID: "110853869505205",
-            thumbnail: "/ImageIcon.png",
+            thumbnail: "Icons/ImageIcon.png",
             fullImage: " ",
             customization: {"SATCOM Option 2":"Clean 2","SATCOM Option 1":"Clean 1","Engine":"General Electric GE90-94B","Base Variant":"200"},
             notes: " ",
@@ -234,7 +234,7 @@
             registration: "A6-EGQ",
             bodyID: ["16016877392"],
             wingID: "12710628039",
-            thumbnail: "/ImageIcon.png",
+            thumbnail: "Icons/ImageIcon.png",
             fullImage: " ",
             customization: "No Customization Available",
             notes: " ",
@@ -247,7 +247,7 @@
             registration: "PT-MUA",
             bodyID: ["15983107758"],
             wingID: "12710628039",
-            thumbnail: "/ImageIcon.png",  // Small icon shown in table
+            thumbnail: "Icons/ImageIcon.png",  // Small icon shown in table
             fullImage: "/palposter.png",   // Full image for modal
             customization: "No Customization Available",
             notes: "Released independently.",
@@ -260,7 +260,7 @@
             registration: "RP-C7772",
             bodyID: ["107963836791698"],
             wingID: "102786383771228",
-            thumbnail: "/ImageIcon.png",
+            thumbnail: "Icons/ImageIcon.png",
             fullImage: "/RP-C7772.png",
             customization: {"SATCOM Option 1":"Option 1B","SATCOM Option 2":"Option 2A"},
             notes: " ",
@@ -273,7 +273,7 @@
             registration: "RP-C7772",
             bodyID: ["94981521175944"],
             wingID: "102786383771228",
-            thumbnail: "/ImageIcon.png",
+            thumbnail: "Icons/ImageIcon.png",
             fullImage: "/RP-C7772.png",
             customization: {"SATCOM Option 1":"Option 1B","SATCOM Option 2":"Option 2A"},
             notes: " ",
@@ -286,7 +286,7 @@
             registration: "D-ABSA",
             bodyID: ["125679162998806"],
             wingID: "122788672580675",
-            thumbnail: "/ImageIcon.png",
+            thumbnail: "Icons/ImageIcon.png",
             fullImage: " ",
             customization: {"SATCOM Option 2":"Clean 2","SATCOM Option 1":"Option 1C","Door Configuration":"10-Door"},
             notes: "Released independently.<br>Fictional Registration (aicraft never bore this livery in real life.)",
@@ -300,7 +300,7 @@
             registration: "G-AZLZ",
             bodyID: ["125689962285872"],
             wingID: "111233664142759",
-            thumbnail: "/ImageIcon.png",
+            thumbnail: "Icons/ImageIcon.png",
             fullImage: "/beaposter.png",
             customization: "No Customization Available",
             notes: "Released independently.<br>Fictional Registration (aicraft never bore this livery in real life.)",
@@ -313,8 +313,8 @@
             registration: "G-ATBA",
             bodyID: ["115143095854566"],
             wingID: "127236518663692",
-            thumbnail: "/ImageIcon.png",
-            fullImage: "/fullPics/G-ATBA.png",
+            thumbnail: "Icons/ImageIcon.png",
+            fullImage: "fullPics/G-ATBA.png",
             customization: "No Customization Available",
             notes: "Released independently.<br>Fictional Registration (aicraft never bore this livery in real life.)",
             fictional: "Yes"
@@ -326,8 +326,8 @@
             registration: "PH-CNA",
             bodyID: ["16698673592"],
             wingID: "17156401746",
-            thumbnail: "/ImageIcon.png",  // Small icon shown in table
-            fullImage: "/fullPics/PH-CNA.png",   // Full image for modal
+            thumbnail: "Icons/ImageIcon.png",  // Small icon shown in table
+            fullImage: "fullPics/PH-CNA.png",   // Full image for modal
             customization: "No Customization Available",
             notes: "Released independently.<br>Fictional Registration (aircraft never bore this livery in real life).",
             airframeInfo: "Airframe nicknamed as 'Súdwest-Fryslân'",
