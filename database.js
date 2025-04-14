@@ -19,7 +19,7 @@
             bodyID: ["126410192986285", "96839954445098", "134376930172499"],
             wingID: "80486619936917",
             thumbnail: "Icons/ImageIcon.png",  // Small icon shown in table
-            fullImage: "fullPics/B-LXA.png",   // Full image for modal
+            fullImage: "1920/9H-JAI.png",   // Full image for modal
             customization: {"Radome":"External Static Dischargers (Late)","Wingroot":"Belly UV","Nose":"No Mask","SATCOM":"Clean","Base Variant":"-300X","Exit Configurations":"Small Waist Door"},
             notes: "Released independently.<br>Engines: 130074038637117",
             airframeInfo: "Manufacturer Serial Number (MSN): 118<br>Airframe built as: Airbus A350-1041<br>Engines: Rolls Royce Trent XWB-97"
@@ -32,7 +32,7 @@
             bodyID: ["112469859856149"],
             wingID: "120589570559595",
             thumbnail: "Icons/ImageIcon.png",  // Small icon shown in table
-            fullImage: "fullPics/B-LXA.png",   // Full image for modal
+            fullImage: "1920/B-LXA.png",   // Full image for modal
             customization: "No Customization Available",
             notes: "Released independently.",
             airframeInfo: "Manufacturer Serial Number (MSN): 118<br>Airframe built as: Airbus A350-1041<br>Engines: Rolls Royce Trent XWB-97"
@@ -95,12 +95,12 @@
         {
             aircraft: "Boeing 747-100",
             airline: "British Airways",
-            livery: "Standard | Landor",
-            registration: "G-AWNN",
+            livery: "Standard | Negus (Patched Short Titles)",
+            registration: "G-AWNC",
             bodyID: ["code1", "code2", "code3"],
             wingID: "code4",
             thumbnail: "Icons/ImageIcon.png",  // Small icon shown in table
-            fullImage: "/noimg.png", // Full image for modal
+            fullImage: "1920/G-AWNC_NGST.png", // Full image for modal
             customization: {"Engines": "Pratt & Whitney PW4000-100", "Radome": "External Static Dischargers (Late)", "Wingroot": "Belly UV", "Nose": "No Mask", "SATCOM": "Clean", "MTOW Rating (Base Variant)": "212t", "Exit Configurations": "Small Waist Door"},
             notes: "Released as part of the Pendragon Collection"
         },
@@ -126,7 +126,7 @@
             bodyID: ["129654657443408"],
             wingID: "79259409809819",
             thumbnail: "Icons/ImageIcon.png",  // Small icon shown in table
-            fullImage: "/palposter.png",   // Full image for modal
+            fullImage: "1920/N741PR.png",   // Full image for modal
             customization: "No Customization Available",
             notes: "Released independently.",
             airframeInfo: "Manufacturer Serial Number (MSN): 21832<br>Line Number (LN): 421<br>Airframe built as: Boeing 747-2F6B<br>Engines: General Electric CF6-50E2"
@@ -140,7 +140,7 @@
             bodyID: ["79509001691902"],
             wingID: "90592345920569",
             thumbnail: "Icons/ImageIcon.png",  // Small icon shown in table
-            fullImage: "fullPics/N741PR_HFH.png",   // Full image for modal
+            fullImage: "1920/N741PR_HFH.png",   // Full image for modal
             customization: "No Customization Available",
             notes: "Released independently.",
             airframeInfo: "Manufacturer Serial Number (MSN): 21832<br>Line Number (LN): 421<br>Airframe built as: Boeing 747-2F6B<br>Engines: General Electric CF6-50E2"
@@ -274,7 +274,7 @@
             bodyID: ["94981521175944"],
             wingID: "102786383771228",
             thumbnail: "Icons/ImageIcon.png",
-            fullImage: "/RP-C7772.png",
+            fullImage: "/RP-C7772_75.png",
             customization: {"SATCOM Option 1":"Option 1B","SATCOM Option 2":"Option 2A"},
             notes: " ",
             airframeInfo: "Manufacturer Serial Number (MSN): 38719<br>Line Number (LN): 1153<br>Airframe built as: Boeing 777-3F6ER<br>Engines: General Electric GE90-115B"
@@ -314,7 +314,7 @@
             bodyID: ["115143095854566"],
             wingID: "127236518663692",
             thumbnail: "Icons/ImageIcon.png",
-            fullImage: "fullPics/G-ATBA.png",
+            fullImage: "1920/G-ATBA.png",
             customization: "No Customization Available",
             notes: "Released independently.<br>Fictional Registration (aicraft never bore this livery in real life.)",
             fictional: "Yes"
@@ -327,7 +327,7 @@
             bodyID: ["16698673592"],
             wingID: "17156401746",
             thumbnail: "Icons/ImageIcon.png",  // Small icon shown in table
-            fullImage: "fullPics/PH-CNA.png",   // Full image for modal
+            fullImage: "1920/PH-CNA.png",   // Full image for modal
             customization: "No Customization Available",
             notes: "Released independently.<br>Fictional Registration (aircraft never bore this livery in real life).",
             airframeInfo: "Airframe nicknamed as 'Súdwest-Fryslân'",
